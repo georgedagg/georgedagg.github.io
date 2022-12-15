@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>George Dagg</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="icon" type="image/x-icon" href="style/images/gd.png">
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="box-left">
+                        <div id="welcome-text">
+                            <h1>George Dagg</h1>
+                            <h3>A skiing, surfing, dog loving software developer in the making.</h3>
+                        </div>
+                    </div>
+                    <div class="box-right">
+                        <img src="style/images/bio.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white flex-center">
+                <div class="container-75">
+                    <div>
+                        <p id="about-text">Twenty-seven and searching for what I want to do in life. I started learning how to code in September 2022, and finally, I feel I'm on the right path. I enjoy building, creating, and solving problems, so understandably, it's a good match. 
+
+                            I am currently at UCD taking the Higher Diploma in Computer Science. I am on the hunt for an internship from May 2023 for a minimum of three months. So if you are reading this... can I have a job? I'll be posting links to my work here, so be sure to check back often.
+                            
+                            When not at a computer, I'm happiest in the snow skiing, at the beach surfing, running or on the bike. Currently training for Ironman Cork 2023; any endurance athletes out there, I'm looking for tips!</p>       
+                    </div>    
+                </div>
+            </div>
+            <div class="flex-center" id="projects">
+                <div class="container-75">
+                    <div class="flex-center">
+                        <h2 onclick="showProjects()" id="projectsText">Projects</h2>
+                    </div>
+                    <div id="projects-displayed" class="bubble"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="social">
+                <input type="image" src="style/images/linkedin.png" onclick="javascript:window.open('https://www.linkedin.com/in/georgedagg/', '_blank')" >
+                <input type="image" src="style/images/github.png" onclick="javascript:window.open('https://github.com/georgedagg', '_blank')">
+                <input type="image" src="style/images/email.png" onclick="javascript:window.open('mailto:george.dagg@ucdconnect.ie', '_blank')">
+            </div>
+        </footer>
+        <script> 
+            function showProjects(){
+                var output = "<p>It's still early days. I'm working hard to bring together a portfolio of projects. Check back soon!</p>";
+                document.getElementById('projects-displayed').innerHTML=output; 
+            }
+        </script>
+    </body>
+</html>
