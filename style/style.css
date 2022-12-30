@@ -95,14 +95,14 @@ footer{
     min-height: 50vh;
 }
 
-#projectsText{
+.underline{
     display: inline-block;
     padding-bottom: 5px;
     position: relative;
 
 }
 
-#projectsText::before{
+.underline::before{
     content: "";
     position: absolute;
     left: 0;
@@ -114,12 +114,17 @@ footer{
     transition: width 0.25s ease-out;
 }
 
-#projectsText:hover::before{
+.underline:hover::before{
     width:100%;
 }
 
-#projectsText:hover{
+.underline:hover{
     cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #564e7b;
 }
 
 .bubble p{

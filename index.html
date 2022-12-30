@@ -31,7 +31,7 @@
             <div class="flex-center" id="projects">
                 <div class="container-75">
                     <div class="flex-center">
-                        <h2 onclick="showProjects()" id="projectsText">Projects</h2>
+                        <h2 onclick="showProjects()" class="underline">Projects</h2>
                     </div>
                     <div id="projects-displayed" class="bubble"></div>
                 </div>
@@ -46,7 +46,7 @@
         </footer>
         <script> 
             function showProjects(){
-                var output = "<p>It's still early days. I'm working hard to bring together a portfolio of projects. Check back soon!</p>";
+                var output = "<p>It's still early days. I'm working hard to bring together a portfolio of projects. In the mean time check out my <a href='https://github.com/georgedagg' target='_blank' class='underline'>Github</a>.</p>";
                 document.getElementById('projects-displayed').innerHTML=output; 
             }
         </script>
