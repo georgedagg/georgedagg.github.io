@@ -7,8 +7,20 @@ body{
     color: #d0c9d4;
 }
 
+p, a{
+    font-size: 2rem;
+}
+
 h1{
+    font-size: 3.5rem;
+}
+
+h2{
     font-size: 3rem;
+}
+
+h3{
+    font-size: 2.5rem;
 }
 
 .wrapper{
@@ -38,6 +50,40 @@ h1{
     align-items: center;
 }
 
+.flex-col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+.card{
+    background-color: #d0c9d4;
+    color: #0c0336;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-desc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    width: 80%;
+}
+
+.card-desc a{
+    text-decoration: none;
+    color: #564e7b;
+}
+
+.video{
+    border-radius: 2rem;
+    background-color: black;
+}
 
 .button:hover{
     background-color: #0c0336;
@@ -45,7 +91,10 @@ h1{
 }
 
 footer{
-    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15vh;
 }
 
 .margin-top{
@@ -54,13 +103,17 @@ footer{
 
 .container{
     display: flex;
+    flex-direction: column;
     width: 60%;
+}
+
+#welcome-text{
+    text-align: center;
 }
 
 #about-text{
     text-align: center;
     color: #0c0336;
-    font-size: 1.5rem;
     padding: 50px 0 50px;
 }
 
@@ -95,6 +148,12 @@ footer{
     min-height: 50vh;
 }
 
+#projects a{
+    text-decoration: none;
+    color: #564e7b;
+
+}
+
 .underline{
     display: inline-block;
     padding-bottom: 5px;
@@ -122,11 +181,6 @@ footer{
     cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-    color: #564e7b;
-}
-
 .bubble p{
     background-color: #d0c9d4;
     color: #0c0336;
@@ -137,37 +191,109 @@ a{
 }
 
 .social{
-    text-align: center;
-    margin: 50px auto;
     padding: 20px;
 }
 
 .social input{
     padding: 20px;
-    height: 3.25rem;
+    height: 4rem;
+}
+
+.box-left{
+    flex: 1;
+    order: 2;
+}
+
+.box-right{
+    justify-content: center;
+    display: flex;
+    flex:1;
+    order: 1;
+}
+
+.button{
+    font-size: 2rem;
+}
+
+#projects-displayed{
+    display: none;
+    animation: fade-in 3s;
+}
+
+#projects{
+    min-height: 30vh;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
 }
 
 
-@media screen and (min-device-width:770px){
 
+@media screen and (min-device-width: 768px){
 
     h1{
         font-size: 3rem;
     }
 
     h2{
-        font-size: 2.2rem;
-        padding: 25px 0 25px;
-        text-align: center;
+        font-size: 2.5rem;
     }
 
     h3{
         font-size: 2rem;
     }
 
-    p{
+    p, a, button{
         font-size: 1.5rem;
-        text-align: center;
+    }
+
+    .social input{
+        height: 3rem;
+    }
+
+    .card-desc{
+        gap: 1rem;
+        
+    }
+
+    
+
+}
+
+
+@media screen and (min-device-width:1024px){
+
+    h1{
+        font-size: 2.75rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    p, a, button{
+        font-size: 1.5rem;
+    }
+    
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #welcome-text{
+        text-align: left;
     }
 
     .box-left{
@@ -194,74 +320,34 @@ a{
         gap: 20px;
     }
 
-    #projects-displayed{
-        font-size: 2rem;
-    }
-
+   
 }
 
-@media screen and (max-device-width: 768px){
-
-    .container{
-        flex-direction: column;
-    }
-
-    #welcome-text{
-        text-align: center;
-    }
-
-
-    h1{
-        font-size: 4rem;
-    }
-
+@media screen and (min-device-width:1440px){
     
-    h2{
-        font-size: 3.5rem;
-        padding: 25px 0 25px;
-        text-align: center;
+    .card{
+        width: 80%;
+        margin: 5rem auto;
+    }
+    
+    .card-desc{
+        width: 90%;
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+        align-items: center;
     }
 
-    h3{
-        font-size: 2.5rem;
-    }
-
-    p{
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .box-left{
-        flex: 1;
-        order: 2;
-    }
-
-    .box-right{
-        justify-content: center;
-        display: flex;
+    .card-text{
         flex:1;
-        order: 1;
     }
 
-    #about-text{
-        font-size: 2rem;
+    .card-graphic{
+        flex:1.25;
     }
 
+    .card-graphic video{
+        height: 80%;
 
-    .button{
-        font-size: 1.5rem;
     }
-
-    #projects-displayed{
-        font-size: 2rem;
-    }
-
-    #projects{
-        min-height: 30vh;
-    }
-    
-    .social input{
-        height: 4rem;
-    }
-
 }

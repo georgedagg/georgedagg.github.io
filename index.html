@@ -13,7 +13,7 @@
                     <div class="box-left">
                         <div id="welcome-text">
                             <h1>George Dagg</h1>
-                            <h3>Skier, surfer, dog lover, and software developer in the making.</h3>
+                            <h3>A skiing, surfing, dog loving software developer in the making.</h3>
                         </div>
                     </div>
                     <div class="box-right">
@@ -24,7 +24,11 @@
             <div class="bg-white flex-center">
                 <div class="container-75">
                     <div>
-                        <p id="about-text">In September 2022, I went back to college to learn how to code, taking the Higher Diploma in Computer Science at University College Dublin. It feels good to say that I love it! To complete the program, I am on the hunt for an internship from May 2023 for a minimum of three months. If you are reading this and have any advice or a lead, I would love to hear from you. I'll be posting links to my work below. When not at a computer, I'm happiest in the snow skiing, at the beach surfing, running or on the bike. Currently training for Ironman Cork 2023; any endurance athletes out there, I'm looking for tips!</p>       
+                        <p id="about-text">Twenty-seven and searching for what I want to do in life. I started learning how to code in September 2022, and finally, I feel I'm on the right path. I enjoy building, creating, and solving problems, so understandably, it's a good match. 
+
+                            I am currently at UCD taking the Higher Diploma in Computer Science. I am on the hunt for an internship from May 2023 for a minimum of three months. So if you are reading this... can I have a job? I'll be posting links to my work here, so be sure to check back often.
+                            
+                            When not at a computer, I'm happiest in the snow skiing, at the beach surfing, running or on the bike. Currently training for Ironman Cork 2023; any endurance athletes out there, I'm looking for tips!</p>       
                     </div>    
                 </div>
             </div>
@@ -33,7 +37,26 @@
                     <div class="flex-center">
                         <h2 onclick="showProjects()" class="underline">Projects</h2>
                     </div>
-                    <div id="projects-displayed" class="bubble"></div>
+                </div>
+            </div>
+            <div class="flex-col" id="projects-displayed">
+                <div class="card">
+                    <div class="card-desc">
+                        <div class="card-text">
+                            <h2>Elemental Readings</h2>
+                            <p>Elemental Empress Medicine is owned and operated by Sofia, a spiritual healer. She was looking for an oracle card
+                                picking program for her website that doubled as a lead generation tool. The program selects three random cards from 
+                                a deck of 48, displaying each card's title and description when selected. Users have the option to save their reading 
+                                by having it emailed to them.
+                            </p>
+                            <p>Visit: <a class="underline" href="https://oraclecards.000webhostapp.com/" target="_blank">Elemental Readings</a></p>
+                        </div>
+                        <div class="card-graphic">
+                            <video class="video" width="100%" controls="controls">
+                            <source src="style/images/elementalvideo.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -46,8 +69,7 @@
         </footer>
         <script> 
             function showProjects(){
-                var output = "<p>It's still early days. I'm working hard to bring together a portfolio of projects. In the mean time check out my <a href='https://github.com/georgedagg' target='_blank' class='underline'>GitHub</a>.</p>";
-                document.getElementById('projects-displayed').innerHTML=output; 
+                document.getElementById('projects-displayed').style.display = "block";
             }
         </script>
     </body>
